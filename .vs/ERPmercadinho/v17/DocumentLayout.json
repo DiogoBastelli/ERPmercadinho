@@ -1,0 +1,72 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\diogo\\source\\repos\\ERPmercadinho\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C77F651C-B990-47F9-9705-4AF94223AA94}|ERPmercadinho\\ERPmercadinho.csproj|c:\\users\\diogo\\source\\repos\\erpmercadinho\\erpmercadinho\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C77F651C-B990-47F9-9705-4AF94223AA94}|ERPmercadinho\\ERPmercadinho.csproj|solutionrelative:erpmercadinho\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C77F651C-B990-47F9-9705-4AF94223AA94}|ERPmercadinho\\ERPmercadinho.csproj|C:\\Users\\diogo\\source\\repos\\ERPmercadinho\\erpmercadinho\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C77F651C-B990-47F9-9705-4AF94223AA94}|ERPmercadinho\\ERPmercadinho.csproj|solutionrelative:erpmercadinho\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C77F651C-B990-47F9-9705-4AF94223AA94}|ERPmercadinho\\ERPmercadinho.csproj|C:\\Users\\diogo\\source\\repos\\ERPmercadinho\\erpmercadinho\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C77F651C-B990-47F9-9705-4AF94223AA94}|ERPmercadinho\\ERPmercadinho.csproj|solutionrelative:erpmercadinho\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\diogo\\source\\repos\\ERPmercadinho\\ERPmercadinho\\Form1.cs",
+              "RelativeDocumentMoniker": "ERPmercadinho\\Form1.cs",
+              "ToolTip": "C:\\Users\\diogo\\source\\repos\\ERPmercadinho\\ERPmercadinho\\Form1.cs",
+              "RelativeToolTip": "ERPmercadinho\\Form1.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBsAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T21:43:19.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Produto.cs",
+              "DocumentMoniker": "C:\\Users\\diogo\\source\\repos\\ERPmercadinho\\ERPmercadinho\\Produto.cs",
+              "RelativeDocumentMoniker": "ERPmercadinho\\Produto.cs",
+              "ToolTip": "C:\\Users\\diogo\\source\\repos\\ERPmercadinho\\ERPmercadinho\\Produto.cs",
+              "RelativeToolTip": "ERPmercadinho\\Produto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T21:00:06.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\diogo\\source\\repos\\ERPmercadinho\\ERPmercadinho\\Form1.cs",
+              "RelativeDocumentMoniker": "ERPmercadinho\\Form1.cs",
+              "ToolTip": "C:\\Users\\diogo\\source\\repos\\ERPmercadinho\\ERPmercadinho\\Form1.cs [Design]",
+              "RelativeToolTip": "ERPmercadinho\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T20:43:10.719Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
