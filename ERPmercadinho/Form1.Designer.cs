@@ -42,12 +42,15 @@
             this.textBoxCodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.dataGridViewProdutos = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.Estoque = new System.Windows.Forms.TabControl();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).BeginInit();
             this.Estoque.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,6 +100,7 @@
             this.tabPage3.Size = new System.Drawing.Size(1828, 936);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Cadastrar";
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // panel1
             // 
@@ -189,13 +193,25 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage4.Controls.Add(this.dataGridViewProdutos);
             this.tabPage4.Location = new System.Drawing.Point(4, 43);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(1828, 936);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Estoque";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
+            // 
+            // dataGridViewProdutos
+            // 
+            this.dataGridViewProdutos.AllowUserToResizeRows = false;
+            this.dataGridViewProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewProdutos.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewProdutos.Name = "dataGridViewProdutos";
+            this.dataGridViewProdutos.ReadOnly = true;
+            this.dataGridViewProdutos.Size = new System.Drawing.Size(1828, 969);
+            this.dataGridViewProdutos.TabIndex = 0;
             // 
             // tabPage5
             // 
@@ -232,6 +248,8 @@
             this.tabPage3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).EndInit();
             this.Estoque.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -255,6 +273,7 @@
         private System.Windows.Forms.Button CadastrarProduto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dataGridViewProdutos;
     }
 }
 

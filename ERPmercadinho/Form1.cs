@@ -14,7 +14,6 @@ namespace ERPmercadinho
     public partial class Form1 : Form
     {
 
-        string conexaoString = "server=localhost;user=root;password=root;database=ERPmercadinho;";
         private void CadastroProduto(int codigo, string nome, decimal preco)
         {
             string conexaoString = "server=localhost;user=root;password=root;database=ERPmercadinho;";
@@ -24,6 +23,18 @@ namespace ERPmercadinho
                 try
                 {
                     conexao.Open();
+
+                    string sqlCheck = "SELECT COUNT(*) FROM produtos WHERE codigo = @codigo OR nome = @nome";
+                    MySqlCommand cmdCheck = new MySqlCommand(sqlCheck, conexao);
+                    cmdCheck.Parameters.AddWithValue("@codigo", codigo);
+                    cmdCheck.Parameters.AddWithValue("@nome", nome);
+
+                    long count = (long)cmdCheck.ExecuteScalar();
+                    if (count > 0)
+                    {
+                        MessageBox.Show("Já existe um produto com este código ou nome.");
+                        return;
+                    }
 
                     string sql = "INSERT INTO produtos (codigo, nome, preco) " +
                                  "VALUES (@codigo, @nome, @preco)";
@@ -46,11 +57,41 @@ namespace ERPmercadinho
             }
         }
 
+        private void CarregarProdutos()
+        {
+            string conexaoString = "server=localhost;user=root;password=root;database=ERPmercadinho;";
+
+            using (MySqlConnection conexao = new MySqlConnection(conexaoString))
+            {
+                try
+                {
+                    conexao.Open();
+                    string sql = "SELECT codigo, nome, preco, quantidade, estoqueMinimo FROM produtos";
+                    MySqlCommand cmd = new MySqlCommand(sql, conexao);
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                    DataTable tabela = new DataTable();
+                    adapter.Fill(tabela);
+
+                    dataGridViewProdutos.DataSource = tabela;
+
+                                  }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao carregar produtos: " + ex.Message);
+                }
+            }
+        }
+
+
         public Form1()
         {
             InitializeComponent();
+            this.Load += Form1CarregarProdutosEstoque;
         }
-
+        private void Form1CarregarProdutosEstoque(object sender, EventArgs e)
+        {
+            CarregarProdutos(); 
+        }
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
@@ -73,6 +114,16 @@ namespace ERPmercadinho
             decimal preco = decimal.Parse(textBoxPreco.Text);
 
             CadastroProduto(codigo, nome, preco);
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
