@@ -31,7 +31,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPageFormularioCadastroProduto = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,16 +41,27 @@
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.textBoxCodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPageEstoque = new System.Windows.Forms.TabPage();
             this.dataGridViewProdutos = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBoxCampoEditado = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxNovoValor = new System.Windows.Forms.TextBox();
+            this.buttonAlterarProduto = new System.Windows.Forms.Button();
+            this.textBoxCodigoAlterar = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.Estoque = new System.Windows.Forms.TabControl();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.tabPageFormularioCadastroProduto.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.tabPage4.SuspendLayout();
+            this.tabPageEstoque.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.Estoque.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,8 +88,8 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPageFormularioCadastroProduto);
+            this.tabControl1.Controls.Add(this.tabPageEstoque);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(6, 6);
@@ -89,18 +100,18 @@
             this.tabControl1.Size = new System.Drawing.Size(1836, 983);
             this.tabControl1.TabIndex = 0;
             // 
-            // tabPage3
+            // tabPageFormularioCadastroProduto
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.LightGray;
-            this.tabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.tabPage3.Controls.Add(this.panel1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 43);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1828, 936);
-            this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "Cadastrar";
-            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            this.tabPageFormularioCadastroProduto.BackColor = System.Drawing.Color.LightGray;
+            this.tabPageFormularioCadastroProduto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.tabPageFormularioCadastroProduto.Controls.Add(this.panel1);
+            this.tabPageFormularioCadastroProduto.Location = new System.Drawing.Point(4, 43);
+            this.tabPageFormularioCadastroProduto.Name = "tabPageFormularioCadastroProduto";
+            this.tabPageFormularioCadastroProduto.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageFormularioCadastroProduto.Size = new System.Drawing.Size(1828, 936);
+            this.tabPageFormularioCadastroProduto.TabIndex = 0;
+            this.tabPageFormularioCadastroProduto.Text = "Cadastrar";
+            this.tabPageFormularioCadastroProduto.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // panel1
             // 
@@ -191,36 +202,132 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Nome";
             // 
-            // tabPage4
+            // tabPageEstoque
             // 
-            this.tabPage4.BackColor = System.Drawing.Color.LightGray;
-            this.tabPage4.Controls.Add(this.dataGridViewProdutos);
-            this.tabPage4.Location = new System.Drawing.Point(4, 43);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1828, 936);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "Estoque";
-            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
+            this.tabPageEstoque.BackColor = System.Drawing.Color.LightGray;
+            this.tabPageEstoque.Controls.Add(this.dataGridViewProdutos);
+            this.tabPageEstoque.Location = new System.Drawing.Point(4, 43);
+            this.tabPageEstoque.Name = "tabPageEstoque";
+            this.tabPageEstoque.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageEstoque.Size = new System.Drawing.Size(1828, 936);
+            this.tabPageEstoque.TabIndex = 1;
+            this.tabPageEstoque.Text = "Estoque";
+            this.tabPageEstoque.Click += new System.EventHandler(this.tabPage4_Click);
             // 
             // dataGridViewProdutos
             // 
             this.dataGridViewProdutos.AllowUserToResizeRows = false;
             this.dataGridViewProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewProdutos.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewProdutos.Location = new System.Drawing.Point(0, 111);
             this.dataGridViewProdutos.Name = "dataGridViewProdutos";
             this.dataGridViewProdutos.ReadOnly = true;
-            this.dataGridViewProdutos.Size = new System.Drawing.Size(1828, 969);
+            this.dataGridViewProdutos.Size = new System.Drawing.Size(1828, 858);
             this.dataGridViewProdutos.TabIndex = 0;
             // 
             // tabPage5
             // 
+            this.tabPage5.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage5.Controls.Add(this.panel2);
             this.tabPage5.Location = new System.Drawing.Point(4, 43);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(1828, 936);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "Produtos";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.comboBoxCampoEditado);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.textBoxNovoValor);
+            this.panel2.Controls.Add(this.buttonAlterarProduto);
+            this.panel2.Controls.Add(this.textBoxCodigoAlterar);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.panel2.Location = new System.Drawing.Point(396, 127);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(648, 583);
+            this.panel2.TabIndex = 9;
+            // 
+            // comboBoxCampoEditado
+            // 
+            this.comboBoxCampoEditado.FormattingEnabled = true;
+            this.comboBoxCampoEditado.Items.AddRange(new object[] {
+            "Nome",
+            "Preço",
+            "Quantidade Estoque",
+            "Quantidade Minima"});
+            this.comboBoxCampoEditado.Location = new System.Drawing.Point(259, 257);
+            this.comboBoxCampoEditado.Name = "comboBoxCampoEditado";
+            this.comboBoxCampoEditado.Size = new System.Drawing.Size(197, 28);
+            this.comboBoxCampoEditado.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(83, 197);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(158, 20);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Codigo do Produto";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(145, 319);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(96, 20);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Novo Valor";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(279, 74);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(131, 20);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Alterar Produto";
+            // 
+            // textBoxNovoValor
+            // 
+            this.textBoxNovoValor.Location = new System.Drawing.Point(259, 316);
+            this.textBoxNovoValor.Name = "textBoxNovoValor";
+            this.textBoxNovoValor.Size = new System.Drawing.Size(197, 26);
+            this.textBoxNovoValor.TabIndex = 6;
+            // 
+            // buttonAlterarProduto
+            // 
+            this.buttonAlterarProduto.Location = new System.Drawing.Point(283, 457);
+            this.buttonAlterarProduto.Name = "buttonAlterarProduto";
+            this.buttonAlterarProduto.Size = new System.Drawing.Size(150, 64);
+            this.buttonAlterarProduto.TabIndex = 1;
+            this.buttonAlterarProduto.Text = "Alterar";
+            this.buttonAlterarProduto.UseVisualStyleBackColor = true;
+            this.buttonAlterarProduto.Click += new System.EventHandler(this.buttonAlterarProduto_Click);
+            // 
+            // textBoxCodigoAlterar
+            // 
+            this.textBoxCodigoAlterar.Location = new System.Drawing.Point(259, 194);
+            this.textBoxCodigoAlterar.Name = "textBoxCodigoAlterar";
+            this.textBoxCodigoAlterar.Size = new System.Drawing.Size(197, 26);
+            this.textBoxCodigoAlterar.TabIndex = 4;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(66, 260);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(175, 20);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Campo a ser editado";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // Estoque
             // 
@@ -245,11 +352,14 @@
             this.Text = "Form1";
             this.tabPage1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
+            this.tabPageFormularioCadastroProduto.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
+            this.tabPageEstoque.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.Estoque.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -261,8 +371,8 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabControl Estoque;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabPageFormularioCadastroProduto;
+        private System.Windows.Forms.TabPage tabPageEstoque;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxPreco;
@@ -274,6 +384,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridViewProdutos;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBoxNovoValor;
+        private System.Windows.Forms.Button buttonAlterarProduto;
+        private System.Windows.Forms.TextBox textBoxCodigoAlterar;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox comboBoxCampoEditado;
     }
 }
 

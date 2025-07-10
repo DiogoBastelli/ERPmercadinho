@@ -74,10 +74,42 @@ namespace ERPmercadinho
 
                     dataGridViewProdutos.DataSource = tabela;
 
-                                  }
+                }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Erro ao carregar produtos: " + ex.Message);
+                }
+            }
+        }
+        private void AlterarProdutos(int codigo, string campoSelecionado, string novoValor)
+        {
+
+            string conexaoString = "server=localhost;user=root;password=root;database=ERPmercadinho;";
+            using (MySqlConnection conexao = new MySqlConnection(conexaoString))
+            {
+                try
+                {
+                    conexao.Open();
+
+                    string sql = $"UPDATE produtos SET {campoSelecionado} = @novoValor WHERE codigo = @codigo";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, conexao);
+                    cmd.Parameters.AddWithValue("@novoValor", novoValor);
+                    cmd.Parameters.AddWithValue("@codigo", codigo);
+
+                    int linhasAfetadas = cmd.ExecuteNonQuery();
+
+                    if (linhasAfetadas > 0)
+                    {
+                        MessageBox.Show("Produto alterado com sucesso!");
+                        CarregarProdutos();
+                    }
+                    else MessageBox.Show("Produto não encontrado.");
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao alterar produto: " + ex.Message);
                 }
             }
         }
@@ -90,7 +122,7 @@ namespace ERPmercadinho
         }
         private void Form1CarregarProdutosEstoque(object sender, EventArgs e)
         {
-            CarregarProdutos(); 
+            CarregarProdutos();
         }
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -123,7 +155,50 @@ namespace ERPmercadinho
 
         private void tabPage4_Click(object sender, EventArgs e)
         {
-           
+
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAlterarProduto_Click(object sender, EventArgs e)
+        {
+            int codigo;
+            if (!int.TryParse(textBoxCodigoAlterar.Text, out codigo))
+            {
+                MessageBox.Show("Código inválido.");
+                return;
+            }
+
+            var mapaCampos = new Dictionary<string, string>()
+            {
+                { "Preço", "preco" },
+                { "Nome", "nome" },
+                { "Quantidade Estoque", "quantidade" },
+                { "Quantidade Minima", "estoqueMinimo" }
+            };
+
+            string campoVisivel = comboBoxCampoEditado.SelectedItem?.ToString();
+            if (string.IsNullOrEmpty(campoVisivel) || !mapaCampos.ContainsKey(campoVisivel))
+            {
+                MessageBox.Show("Campo inválido.");
+                return;
+            }
+
+            string campoBanco = mapaCampos[campoVisivel];
+            string novoValor = textBoxNovoValor.Text;
+
+            if (string.IsNullOrEmpty(novoValor))
+            {
+                MessageBox.Show("Informe o novo valor.");
+                return;
+            }
+
+            AlterarProdutos(codigo, campoBanco, novoValor);
+        }
+
+
     }
 }
