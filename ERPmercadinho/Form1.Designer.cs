@@ -42,6 +42,7 @@
             this.textBoxCodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPageEstoque = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
             this.dataGridViewProdutos = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -53,7 +54,13 @@
             this.buttonAlterarProduto = new System.Windows.Forms.Button();
             this.textBoxCodigoAlterar = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.Armazenar = new System.Windows.Forms.TabPage();
             this.Estoque = new System.Windows.Forms.TabControl();
+            this.label10 = new System.Windows.Forms.Label();
+            this.buttonProximo = new System.Windows.Forms.Button();
+            this.textBoxCodigoArmazenar = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageFormularioCadastroProduto.SuspendLayout();
@@ -62,7 +69,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).BeginInit();
             this.tabPage5.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.Armazenar.SuspendLayout();
             this.Estoque.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -91,6 +100,7 @@
             this.tabControl1.Controls.Add(this.tabPageFormularioCadastroProduto);
             this.tabControl1.Controls.Add(this.tabPageEstoque);
             this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.Armazenar);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(6, 6);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(6);
@@ -99,6 +109,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1836, 983);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPageFormularioCadastroProduto
             // 
@@ -205,6 +216,7 @@
             // tabPageEstoque
             // 
             this.tabPageEstoque.BackColor = System.Drawing.Color.LightGray;
+            this.tabPageEstoque.Controls.Add(this.label9);
             this.tabPageEstoque.Controls.Add(this.dataGridViewProdutos);
             this.tabPageEstoque.Location = new System.Drawing.Point(4, 43);
             this.tabPageEstoque.Name = "tabPageEstoque";
@@ -213,6 +225,15 @@
             this.tabPageEstoque.TabIndex = 1;
             this.tabPageEstoque.Text = "Estoque";
             this.tabPageEstoque.Click += new System.EventHandler(this.tabPage4_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(21, 46);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(62, 20);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "codigo";
             // 
             // dataGridViewProdutos
             // 
@@ -232,7 +253,7 @@
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(1828, 936);
             this.tabPage5.TabIndex = 2;
-            this.tabPage5.Text = "Produtos";
+            this.tabPage5.Text = "Alterar";
             // 
             // panel2
             // 
@@ -246,9 +267,9 @@
             this.panel2.Controls.Add(this.textBoxCodigoAlterar);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panel2.Location = new System.Drawing.Point(396, 127);
+            this.panel2.Location = new System.Drawing.Point(431, 172);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(648, 583);
+            this.panel2.Size = new System.Drawing.Size(635, 499);
             this.panel2.TabIndex = 9;
             // 
             // comboBoxCampoEditado
@@ -259,7 +280,7 @@
             "Preço",
             "Quantidade Estoque",
             "Quantidade Minima"});
-            this.comboBoxCampoEditado.Location = new System.Drawing.Point(259, 257);
+            this.comboBoxCampoEditado.Location = new System.Drawing.Point(303, 192);
             this.comboBoxCampoEditado.Name = "comboBoxCampoEditado";
             this.comboBoxCampoEditado.Size = new System.Drawing.Size(197, 28);
             this.comboBoxCampoEditado.TabIndex = 8;
@@ -268,7 +289,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(83, 197);
+            this.label5.Location = new System.Drawing.Point(127, 132);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(158, 20);
             this.label5.TabIndex = 5;
@@ -278,7 +299,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(145, 319);
+            this.label6.Location = new System.Drawing.Point(189, 254);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(96, 20);
             this.label6.TabIndex = 7;
@@ -290,20 +311,20 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(279, 74);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(131, 20);
+            this.label7.Size = new System.Drawing.Size(0, 20);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Alterar Produto";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // textBoxNovoValor
             // 
-            this.textBoxNovoValor.Location = new System.Drawing.Point(259, 316);
+            this.textBoxNovoValor.Location = new System.Drawing.Point(303, 251);
             this.textBoxNovoValor.Name = "textBoxNovoValor";
             this.textBoxNovoValor.Size = new System.Drawing.Size(197, 26);
             this.textBoxNovoValor.TabIndex = 6;
             // 
             // buttonAlterarProduto
             // 
-            this.buttonAlterarProduto.Location = new System.Drawing.Point(283, 457);
+            this.buttonAlterarProduto.Location = new System.Drawing.Point(268, 356);
             this.buttonAlterarProduto.Name = "buttonAlterarProduto";
             this.buttonAlterarProduto.Size = new System.Drawing.Size(150, 64);
             this.buttonAlterarProduto.TabIndex = 1;
@@ -313,7 +334,7 @@
             // 
             // textBoxCodigoAlterar
             // 
-            this.textBoxCodigoAlterar.Location = new System.Drawing.Point(259, 194);
+            this.textBoxCodigoAlterar.Location = new System.Drawing.Point(303, 129);
             this.textBoxCodigoAlterar.Name = "textBoxCodigoAlterar";
             this.textBoxCodigoAlterar.Size = new System.Drawing.Size(197, 26);
             this.textBoxCodigoAlterar.TabIndex = 4;
@@ -322,12 +343,23 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(66, 260);
+            this.label8.Location = new System.Drawing.Point(110, 195);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(175, 20);
             this.label8.TabIndex = 3;
             this.label8.Text = "Campo a ser editado";
             this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // Armazenar
+            // 
+            this.Armazenar.BackColor = System.Drawing.Color.LightGray;
+            this.Armazenar.Controls.Add(this.panel3);
+            this.Armazenar.Location = new System.Drawing.Point(4, 43);
+            this.Armazenar.Name = "Armazenar";
+            this.Armazenar.Padding = new System.Windows.Forms.Padding(3);
+            this.Armazenar.Size = new System.Drawing.Size(1828, 936);
+            this.Armazenar.TabIndex = 3;
+            this.Armazenar.Text = "Armazenar";
             // 
             // Estoque
             // 
@@ -341,6 +373,54 @@
             this.Estoque.SelectedIndex = 0;
             this.Estoque.Size = new System.Drawing.Size(1871, 1058);
             this.Estoque.TabIndex = 0;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(110, 88);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(158, 20);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "Codigo do Produto";
+            // 
+            // buttonProximo
+            // 
+            this.buttonProximo.Location = new System.Drawing.Point(250, 185);
+            this.buttonProximo.Name = "buttonProximo";
+            this.buttonProximo.Size = new System.Drawing.Size(142, 41);
+            this.buttonProximo.TabIndex = 10;
+            this.buttonProximo.Text = "Proximo";
+            this.buttonProximo.UseVisualStyleBackColor = true;
+            this.buttonProximo.Click += new System.EventHandler(this.buttonProximo_Click);
+            // 
+            // textBoxCodigoArmazenar
+            // 
+            this.textBoxCodigoArmazenar.Location = new System.Drawing.Point(286, 85);
+            this.textBoxCodigoArmazenar.Name = "textBoxCodigoArmazenar";
+            this.textBoxCodigoArmazenar.Size = new System.Drawing.Size(197, 26);
+            this.textBoxCodigoArmazenar.TabIndex = 12;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(172, -12);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(0, 20);
+            this.label12.TabIndex = 9;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel3.Controls.Add(this.textBoxCodigoArmazenar);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.buttonProximo);
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Location = new System.Drawing.Point(389, 240);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(647, 284);
+            this.panel3.TabIndex = 17;
             // 
             // Form1
             // 
@@ -356,11 +436,15 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabPageEstoque.ResumeLayout(false);
+            this.tabPageEstoque.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.Armazenar.ResumeLayout(false);
             this.Estoque.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -372,19 +456,20 @@
         private System.Windows.Forms.TabControl Estoque;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPageFormularioCadastroProduto;
-        private System.Windows.Forms.TabPage tabPageEstoque;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBoxPreco;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxPreco;
+        private System.Windows.Forms.Button CadastrarProduto;
+        private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.TextBox textBoxCodigo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxNome;
-        private System.Windows.Forms.Button CadastrarProduto;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TabPage tabPageEstoque;
         private System.Windows.Forms.DataGridView dataGridViewProdutos;
+        private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox comboBoxCampoEditado;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -392,7 +477,13 @@
         private System.Windows.Forms.Button buttonAlterarProduto;
         private System.Windows.Forms.TextBox textBoxCodigoAlterar;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBoxCampoEditado;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TabPage Armazenar;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button buttonProximo;
+        private System.Windows.Forms.TextBox textBoxCodigoArmazenar;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label12;
     }
 }
 

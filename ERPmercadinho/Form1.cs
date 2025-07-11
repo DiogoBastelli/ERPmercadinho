@@ -14,7 +14,7 @@ namespace ERPmercadinho
     public partial class Form1 : Form
     {
 
-        private void CadastroProduto(int codigo, string nome, decimal preco)
+        private bool CadastroProduto(int codigo, string nome, decimal preco)
         {
             string conexaoString = "server=localhost;user=root;password=root;database=ERPmercadinho;";
 
@@ -33,31 +33,32 @@ namespace ERPmercadinho
                     if (count > 0)
                     {
                         MessageBox.Show("Já existe um produto com este código ou nome.");
-                        return;
+                        return false;
                     }
 
-                    string sql = "INSERT INTO produtos (codigo, nome, preco) " +
-                                 "VALUES (@codigo, @nome, @preco)";
-
+                    string sql = "INSERT INTO produtos (codigo, nome, preco , estoqueMinimo ,quantidade ) " +
+                                 "VALUES (@codigo, @nome, @preco , @estoqueMinimo ,@quantidade)";
                     MySqlCommand cmd = new MySqlCommand(sql, conexao);
                     cmd.Parameters.AddWithValue("@codigo", codigo);
                     cmd.Parameters.AddWithValue("@nome", nome);
                     cmd.Parameters.AddWithValue("@preco", preco);
-                    //cmd.Parameters.AddWithValue("@quantidade", quantidade);
                     cmd.Parameters.AddWithValue("@estoqueMinimo", 10);
-
+                    cmd.Parameters.AddWithValue("@quantidade", 0);
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Produto cadastrado com sucesso!");
+                    return true;
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Erro: " + ex.Message);
+                    return false;
                 }
             }
         }
 
-        private void CarregarProdutos()
+
+        public void CarregarProdutos()
         {
             string conexaoString = "server=localhost;user=root;password=root;database=ERPmercadinho;";
 
@@ -65,6 +66,7 @@ namespace ERPmercadinho
             {
                 try
                 {
+
                     conexao.Open();
                     string sql = "SELECT codigo, nome, preco, quantidade, estoqueMinimo FROM produtos";
                     MySqlCommand cmd = new MySqlCommand(sql, conexao);
@@ -81,6 +83,40 @@ namespace ERPmercadinho
                 }
             }
         }
+        private string PesquisarProdutoPorCodigo(int codigo)
+        {
+            string conexaoString = "server=localhost;user=root;password=root;database=ERPmercadinho;";
+
+            using (MySqlConnection conexao = new MySqlConnection(conexaoString))
+            {
+                try
+                {
+                    conexao.Open();
+                    string sql = "SELECT codigo, nome FROM produtos WHERE codigo = @codigo";
+                    MySqlCommand cmd = new MySqlCommand(sql, conexao);
+                    cmd.Parameters.AddWithValue("@codigo", codigo);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        string linha = $"Código: {reader["codigo"]} - Nome: {reader["nome"]}";
+                        return linha;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao carregar produto: " + ex.Message);
+                    return null;
+                }
+            }
+        }
+
+
         private void AlterarProdutos(int codigo, string campoSelecionado, string novoValor)
         {
 
@@ -113,6 +149,7 @@ namespace ERPmercadinho
                 }
             }
         }
+        
 
 
         public Form1()
@@ -145,7 +182,14 @@ namespace ERPmercadinho
             int codigo = int.Parse(textBoxCodigo.Text);
             decimal preco = decimal.Parse(textBoxPreco.Text);
 
-            CadastroProduto(codigo, nome, preco);
+            bool cadastro = CadastroProduto(codigo, nome, preco);
+            if(cadastro)
+            {
+                textBoxNome.Clear();
+                textBoxCodigo.Clear();
+                textBoxPreco.Clear();
+                CarregarProdutos();
+            }
         }
 
         private void tabPage3_Click(object sender, EventArgs e)
@@ -199,6 +243,43 @@ namespace ERPmercadinho
             AlterarProdutos(codigo, campoBanco, novoValor);
         }
 
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonProximo_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(textBoxCodigoArmazenar.Text, out int codigo))
+            {
+                string resultado = PesquisarProdutoPorCodigo(codigo);
+                if (resultado != null)
+                {
+                    FormQuantidadeArmazenarProduto formArmazenar = new FormQuantidadeArmazenarProduto(resultado , codigo , this);
+                    formArmazenar.ShowDialog();
+                    textBoxCodigoArmazenar.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Produto não encontrado.");
+                    return;
+                }
+                
+
+            }
+            else
+            {
+                MessageBox.Show("Digite um código válido.");
+            }
+        }
+
+
+       
     }
 }

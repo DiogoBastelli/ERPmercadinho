@@ -41,3 +41,4 @@ C:\Users\diogo\source\repos\ERPmercadinho\ERPmercadinho\bin\Debug\System.Numeric
 C:\Users\diogo\source\repos\ERPmercadinho\ERPmercadinho\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\diogo\source\repos\ERPmercadinho\ERPmercadinho\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\diogo\source\repos\ERPmercadinho\ERPmercadinho\obj\Debug\ERPmerca.5AA3A90F.Up2Date
+C:\Users\diogo\source\repos\ERPmercadinho\ERPmercadinho\obj\Debug\ERPmercadinho.FormQuantidadeArmazenarProduto.resources
