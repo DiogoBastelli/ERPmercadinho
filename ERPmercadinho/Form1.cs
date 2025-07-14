@@ -149,8 +149,50 @@ namespace ERPmercadinho
                 }
             }
         }
-        
 
+        private bool CadastrarCliente(string nomeCliente , string cpf , string telefone , string endereco)
+        {
+            string conexaoString = "server=localhost;user=root;password=root;database=ERPmercadinho;";
+            using (MySqlConnection conexao = new MySqlConnection(conexaoString))
+            {
+                try
+                {
+                    conexao.Open();
+
+                    string sqlCheck = "SELECT COUNT(*) FROM cliente WHERE cpf = @cpf ";
+                    MySqlCommand cmdCheck = new MySqlCommand(sqlCheck, conexao);
+                    cmdCheck.Parameters.AddWithValue("@cpf", cpf);
+
+
+                    long count = (long)cmdCheck.ExecuteScalar();
+                    if (count > 0)
+                    {
+                        MessageBox.Show("Já existe um cliente cadastrado com esse Cpf");
+                        return false;
+                    }
+
+                    string sql = "INSERT INTO cliente (nome, cpf, endereco, telefone) " +
+                    "VALUES (@nomeCliente, @cpf, @endereco, @telefone)";
+
+
+                    MySqlCommand cmd = new MySqlCommand(sql, conexao);
+                    cmd.Parameters.AddWithValue("@nomeCliente", nomeCliente);
+                    cmd.Parameters.AddWithValue("@cpf", cpf);
+                    cmd.Parameters.AddWithValue("@telefone", telefone);
+                    cmd.Parameters.AddWithValue("@endereco", endereco);
+
+                    int linhasAfetadas = cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Cliente cadastrado com sucesso!");
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao cadastrar cliente: " + ex.Message);
+                    return false;   
+                }
+            }
+        }
 
         public Form1()
         {
@@ -279,7 +321,30 @@ namespace ERPmercadinho
             }
         }
 
+        private void buttonCadastrarCliente_Click(object sender, EventArgs e)
+        {
+            string nomeCliente = textBoxNomeCliente.Text;
+            string cpf = textBoxCpf.Text;
+            string telefone = textBoxTelefone.Text;
+            string endereco = textBoxEndereco.Text;
 
-       
+            if (string.IsNullOrEmpty(nomeCliente) ||
+                string.IsNullOrEmpty(cpf) ||
+                string.IsNullOrEmpty(telefone) ||
+                string.IsNullOrEmpty(endereco))
+            {
+                MessageBox.Show("Por favor, preencha todos os campos.", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; 
+            }
+
+            bool cadastroCliente = CadastrarCliente(nomeCliente, cpf, telefone, endereco);
+            if (cadastroCliente)
+            {
+                textBoxNomeCliente.Clear();
+                textBoxCpf.Clear();
+                textBoxTelefone.Clear();
+                textBoxEndereco.Clear();
+            }
+        }
     }
 }

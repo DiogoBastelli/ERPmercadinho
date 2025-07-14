@@ -55,12 +55,27 @@
             this.textBoxCodigoAlterar = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.Armazenar = new System.Windows.Forms.TabPage();
-            this.Estoque = new System.Windows.Forms.TabControl();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.textBoxCodigoArmazenar = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.buttonProximo = new System.Windows.Forms.Button();
-            this.textBoxCodigoArmazenar = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.Estoque = new System.Windows.Forms.TabControl();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBoxEndereco = new System.Windows.Forms.TextBox();
+            this.buttonCadastrarCliente = new System.Windows.Forms.Button();
+            this.textBoxNomeCliente = new System.Windows.Forms.TextBox();
+            this.textBoxCpf = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBoxTelefone = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.tabControlCadastroCliente = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageFormularioCadastroProduto.SuspendLayout();
@@ -70,12 +85,16 @@
             this.tabPage5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.Armazenar.SuspendLayout();
-            this.Estoque.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.Estoque.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.tabControlCadastroCliente.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.tabControlCadastroCliente);
             this.tabPage2.Location = new System.Drawing.Point(4, 52);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -144,10 +163,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(145, 256);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 20);
+            this.label3.Size = new System.Drawing.Size(98, 29);
             this.label3.TabIndex = 5;
             this.label3.Text = "Codigo";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -155,32 +175,36 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(145, 335);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 20);
+            this.label4.Size = new System.Drawing.Size(82, 29);
             this.label4.TabIndex = 7;
             this.label4.Text = "Preço";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(255, 76);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 20);
+            this.label1.Size = new System.Drawing.Size(254, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastro de Produto";
             // 
             // textBoxPreco
             // 
+            this.textBoxPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPreco.Location = new System.Drawing.Point(259, 332);
             this.textBoxPreco.Name = "textBoxPreco";
-            this.textBoxPreco.Size = new System.Drawing.Size(197, 26);
+            this.textBoxPreco.Size = new System.Drawing.Size(197, 35);
             this.textBoxPreco.TabIndex = 6;
             // 
             // CadastrarProduto
             // 
+            this.CadastrarProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CadastrarProduto.Location = new System.Drawing.Point(283, 467);
             this.CadastrarProduto.Name = "CadastrarProduto";
             this.CadastrarProduto.Size = new System.Drawing.Size(150, 64);
@@ -191,25 +215,28 @@
             // 
             // textBoxNome
             // 
+            this.textBoxNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNome.Location = new System.Drawing.Point(259, 183);
             this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(197, 26);
+            this.textBoxNome.Size = new System.Drawing.Size(197, 35);
             this.textBoxNome.TabIndex = 2;
             // 
             // textBoxCodigo
             // 
+            this.textBoxCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCodigo.Location = new System.Drawing.Point(259, 253);
             this.textBoxCodigo.Name = "textBoxCodigo";
-            this.textBoxCodigo.Size = new System.Drawing.Size(197, 26);
+            this.textBoxCodigo.Size = new System.Drawing.Size(197, 35);
             this.textBoxCodigo.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(145, 186);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 20);
+            this.label2.Size = new System.Drawing.Size(83, 29);
             this.label2.TabIndex = 3;
             this.label2.Text = "Nome";
             // 
@@ -361,18 +388,24 @@
             this.Armazenar.TabIndex = 3;
             this.Armazenar.Text = "Armazenar";
             // 
-            // Estoque
+            // panel3
             // 
-            this.Estoque.Controls.Add(this.tabPage1);
-            this.Estoque.Controls.Add(this.tabPage2);
-            this.Estoque.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Estoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Estoque.Location = new System.Drawing.Point(2, 2);
-            this.Estoque.Name = "Estoque";
-            this.Estoque.Padding = new System.Drawing.Point(13, 10);
-            this.Estoque.SelectedIndex = 0;
-            this.Estoque.Size = new System.Drawing.Size(1871, 1058);
-            this.Estoque.TabIndex = 0;
+            this.panel3.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel3.Controls.Add(this.textBoxCodigoArmazenar);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.buttonProximo);
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Location = new System.Drawing.Point(389, 240);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(647, 284);
+            this.panel3.TabIndex = 17;
+            // 
+            // textBoxCodigoArmazenar
+            // 
+            this.textBoxCodigoArmazenar.Location = new System.Drawing.Point(286, 85);
+            this.textBoxCodigoArmazenar.Name = "textBoxCodigoArmazenar";
+            this.textBoxCodigoArmazenar.Size = new System.Drawing.Size(197, 26);
+            this.textBoxCodigoArmazenar.TabIndex = 12;
             // 
             // label10
             // 
@@ -394,13 +427,6 @@
             this.buttonProximo.UseVisualStyleBackColor = true;
             this.buttonProximo.Click += new System.EventHandler(this.buttonProximo_Click);
             // 
-            // textBoxCodigoArmazenar
-            // 
-            this.textBoxCodigoArmazenar.Location = new System.Drawing.Point(286, 85);
-            this.textBoxCodigoArmazenar.Name = "textBoxCodigoArmazenar";
-            this.textBoxCodigoArmazenar.Size = new System.Drawing.Size(197, 26);
-            this.textBoxCodigoArmazenar.TabIndex = 12;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -410,17 +436,168 @@
             this.label12.Size = new System.Drawing.Size(0, 20);
             this.label12.TabIndex = 9;
             // 
-            // panel3
+            // Estoque
             // 
-            this.panel3.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel3.Controls.Add(this.textBoxCodigoArmazenar);
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.buttonProximo);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Location = new System.Drawing.Point(389, 240);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(647, 284);
-            this.panel3.TabIndex = 17;
+            this.Estoque.Controls.Add(this.tabPage1);
+            this.Estoque.Controls.Add(this.tabPage2);
+            this.Estoque.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Estoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Estoque.Location = new System.Drawing.Point(2, 2);
+            this.Estoque.Name = "Estoque";
+            this.Estoque.Padding = new System.Drawing.Point(13, 10);
+            this.Estoque.SelectedIndex = 0;
+            this.Estoque.Size = new System.Drawing.Size(1871, 1058);
+            this.Estoque.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel4.Controls.Add(this.textBoxTelefone);
+            this.panel4.Controls.Add(this.label16);
+            this.panel4.Controls.Add(this.label11);
+            this.panel4.Controls.Add(this.label13);
+            this.panel4.Controls.Add(this.label14);
+            this.panel4.Controls.Add(this.textBoxEndereco);
+            this.panel4.Controls.Add(this.buttonCadastrarCliente);
+            this.panel4.Controls.Add(this.textBoxNomeCliente);
+            this.panel4.Controls.Add(this.textBoxCpf);
+            this.panel4.Controls.Add(this.label15);
+            this.panel4.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.panel4.Location = new System.Drawing.Point(405, 126);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(648, 583);
+            this.panel4.TabIndex = 9;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(175, 265);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 29);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Cpf";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(102, 332);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(126, 29);
+            this.label13.TabIndex = 7;
+            this.label13.Text = "Endereco";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(220, 70);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(240, 29);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Cadastro de cliente";
+            // 
+            // textBoxEndereco
+            // 
+            this.textBoxEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEndereco.Location = new System.Drawing.Point(259, 329);
+            this.textBoxEndereco.Name = "textBoxEndereco";
+            this.textBoxEndereco.Size = new System.Drawing.Size(197, 35);
+            this.textBoxEndereco.TabIndex = 6;
+            // 
+            // buttonCadastrarCliente
+            // 
+            this.buttonCadastrarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCadastrarCliente.Location = new System.Drawing.Point(259, 473);
+            this.buttonCadastrarCliente.Name = "buttonCadastrarCliente";
+            this.buttonCadastrarCliente.Size = new System.Drawing.Size(150, 64);
+            this.buttonCadastrarCliente.TabIndex = 1;
+            this.buttonCadastrarCliente.Text = "Cadastrar";
+            this.buttonCadastrarCliente.UseVisualStyleBackColor = true;
+            this.buttonCadastrarCliente.Click += new System.EventHandler(this.buttonCadastrarCliente_Click);
+            // 
+            // textBoxNomeCliente
+            // 
+            this.textBoxNomeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNomeCliente.Location = new System.Drawing.Point(259, 194);
+            this.textBoxNomeCliente.Name = "textBoxNomeCliente";
+            this.textBoxNomeCliente.Size = new System.Drawing.Size(197, 35);
+            this.textBoxNomeCliente.TabIndex = 2;
+            // 
+            // textBoxCpf
+            // 
+            this.textBoxCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCpf.Location = new System.Drawing.Point(259, 262);
+            this.textBoxCpf.Name = "textBoxCpf";
+            this.textBoxCpf.Size = new System.Drawing.Size(197, 35);
+            this.textBoxCpf.TabIndex = 4;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(145, 197);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(83, 29);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "Nome";
+            // 
+            // textBoxTelefone
+            // 
+            this.textBoxTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTelefone.Location = new System.Drawing.Point(259, 397);
+            this.textBoxTelefone.Name = "textBoxTelefone";
+            this.textBoxTelefone.Size = new System.Drawing.Size(197, 35);
+            this.textBoxTelefone.TabIndex = 8;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(110, 400);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(118, 29);
+            this.label16.TabIndex = 9;
+            this.label16.Text = "Telefone";
+            // 
+            // tabControlCadastroCliente
+            // 
+            this.tabControlCadastroCliente.Controls.Add(this.tabPage3);
+            this.tabControlCadastroCliente.Controls.Add(this.tabPage4);
+            this.tabControlCadastroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlCadastroCliente.Location = new System.Drawing.Point(3, 3);
+            this.tabControlCadastroCliente.Name = "tabControlCadastroCliente";
+            this.tabControlCadastroCliente.Padding = new System.Drawing.Point(10, 10);
+            this.tabControlCadastroCliente.SelectedIndex = 0;
+            this.tabControlCadastroCliente.Size = new System.Drawing.Size(1821, 953);
+            this.tabControlCadastroCliente.TabIndex = 10;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage3.Controls.Add(this.panel4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 43);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1813, 906);
+            this.tabPage3.TabIndex = 0;
+            this.tabPage3.Text = "Cadastrar";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 43);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1813, 906);
+            this.tabPage4.TabIndex = 1;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -430,6 +607,7 @@
             this.Controls.Add(this.Estoque);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.tabPage2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPageFormularioCadastroProduto.ResumeLayout(false);
@@ -442,9 +620,13 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.Armazenar.ResumeLayout(false);
-            this.Estoque.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.Estoque.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.tabControlCadastroCliente.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -484,6 +666,20 @@
         private System.Windows.Forms.TextBox textBoxCodigoArmazenar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox textBoxTelefone;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBoxEndereco;
+        private System.Windows.Forms.Button buttonCadastrarCliente;
+        private System.Windows.Forms.TextBox textBoxNomeCliente;
+        private System.Windows.Forms.TextBox textBoxCpf;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TabControl tabControlCadastroCliente;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage4;
     }
 }
 
