@@ -29,6 +29,21 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.TabControl Fiado;
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.textBoxTelefone = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBoxEndereco = new System.Windows.Forms.TextBox();
+            this.buttonCadastrarCliente = new System.Windows.Forms.Button();
+            this.textBoxNomeCliente = new System.Windows.Forms.TextBox();
+            this.textBoxCpf = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.textBoxPesquisaCliente = new System.Windows.Forms.TextBox();
+            this.dataGridViewClientes = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -62,21 +77,12 @@
             this.buttonProximo = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.Estoque = new System.Windows.Forms.TabControl();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.dataGridViewClientes = new System.Windows.Forms.DataGridView();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBoxCpf = new System.Windows.Forms.TextBox();
-            this.textBoxNomeCliente = new System.Windows.Forms.TextBox();
-            this.buttonCadastrarCliente = new System.Windows.Forms.Button();
-            this.textBoxEndereco = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBoxTelefone = new System.Windows.Forms.TextBox();
             Fiado = new System.Windows.Forms.TabControl();
+            Fiado.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -89,12 +95,180 @@
             this.Armazenar.SuspendLayout();
             this.panel3.SuspendLayout();
             this.Estoque.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).BeginInit();
-            this.tabPage3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            Fiado.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // Fiado
+            // 
+            Fiado.Controls.Add(this.tabPage3);
+            Fiado.Controls.Add(this.tabPage4);
+            Fiado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            Fiado.Location = new System.Drawing.Point(0, 0);
+            Fiado.Name = "Fiado";
+            Fiado.Padding = new System.Drawing.Point(10, 10);
+            Fiado.SelectedIndex = 0;
+            Fiado.Size = new System.Drawing.Size(1821, 953);
+            Fiado.TabIndex = 10;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage3.Controls.Add(this.panel4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 43);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1813, 906);
+            this.tabPage3.TabIndex = 0;
+            this.tabPage3.Text = "Cadastrar";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel4.Controls.Add(this.textBoxTelefone);
+            this.panel4.Controls.Add(this.label16);
+            this.panel4.Controls.Add(this.label11);
+            this.panel4.Controls.Add(this.label13);
+            this.panel4.Controls.Add(this.label14);
+            this.panel4.Controls.Add(this.textBoxEndereco);
+            this.panel4.Controls.Add(this.buttonCadastrarCliente);
+            this.panel4.Controls.Add(this.textBoxNomeCliente);
+            this.panel4.Controls.Add(this.textBoxCpf);
+            this.panel4.Controls.Add(this.label15);
+            this.panel4.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.panel4.Location = new System.Drawing.Point(405, 126);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(648, 583);
+            this.panel4.TabIndex = 9;
+            // 
+            // textBoxTelefone
+            // 
+            this.textBoxTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTelefone.Location = new System.Drawing.Point(259, 397);
+            this.textBoxTelefone.Name = "textBoxTelefone";
+            this.textBoxTelefone.Size = new System.Drawing.Size(197, 35);
+            this.textBoxTelefone.TabIndex = 8;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(110, 400);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(118, 29);
+            this.label16.TabIndex = 9;
+            this.label16.Text = "Telefone";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(175, 265);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 29);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Cpf";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(102, 332);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(126, 29);
+            this.label13.TabIndex = 7;
+            this.label13.Text = "Endereco";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(220, 70);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(240, 29);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Cadastro de cliente";
+            // 
+            // textBoxEndereco
+            // 
+            this.textBoxEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEndereco.Location = new System.Drawing.Point(259, 329);
+            this.textBoxEndereco.Name = "textBoxEndereco";
+            this.textBoxEndereco.Size = new System.Drawing.Size(197, 35);
+            this.textBoxEndereco.TabIndex = 6;
+            // 
+            // buttonCadastrarCliente
+            // 
+            this.buttonCadastrarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCadastrarCliente.Location = new System.Drawing.Point(259, 473);
+            this.buttonCadastrarCliente.Name = "buttonCadastrarCliente";
+            this.buttonCadastrarCliente.Size = new System.Drawing.Size(150, 64);
+            this.buttonCadastrarCliente.TabIndex = 1;
+            this.buttonCadastrarCliente.Text = "Cadastrar";
+            this.buttonCadastrarCliente.UseVisualStyleBackColor = true;
+            this.buttonCadastrarCliente.Click += new System.EventHandler(this.buttonCadastrarCliente_Click);
+            // 
+            // textBoxNomeCliente
+            // 
+            this.textBoxNomeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNomeCliente.Location = new System.Drawing.Point(259, 194);
+            this.textBoxNomeCliente.Name = "textBoxNomeCliente";
+            this.textBoxNomeCliente.Size = new System.Drawing.Size(197, 35);
+            this.textBoxNomeCliente.TabIndex = 2;
+            // 
+            // textBoxCpf
+            // 
+            this.textBoxCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCpf.Location = new System.Drawing.Point(259, 262);
+            this.textBoxCpf.Name = "textBoxCpf";
+            this.textBoxCpf.Size = new System.Drawing.Size(197, 35);
+            this.textBoxCpf.TabIndex = 4;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(145, 197);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(83, 29);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "Nome";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.textBoxPesquisaCliente);
+            this.tabPage4.Controls.Add(this.dataGridViewClientes);
+            this.tabPage4.Location = new System.Drawing.Point(4, 43);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1813, 906);
+            this.tabPage4.TabIndex = 1;
+            this.tabPage4.Text = "Lista de Clientes";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // textBoxPesquisaCliente
+            // 
+            this.textBoxPesquisaCliente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystem;
+            this.textBoxPesquisaCliente.Location = new System.Drawing.Point(385, 39);
+            this.textBoxPesquisaCliente.Name = "textBoxPesquisaCliente";
+            this.textBoxPesquisaCliente.Size = new System.Drawing.Size(280, 26);
+            this.textBoxPesquisaCliente.TabIndex = 1;
+            this.textBoxPesquisaCliente.Tag = "";
+            this.textBoxPesquisaCliente.Text = "nome do cliente";
+            this.textBoxPesquisaCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxPesquisaCliente.TextChanged += new System.EventHandler(this.textBoxPesquisaCliente_TextChanged);
+            // 
+            // dataGridViewClientes
+            // 
+            this.dataGridViewClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewClientes.Location = new System.Drawing.Point(132, 111);
+            this.dataGridViewClientes.Name = "dataGridViewClientes";
+            this.dataGridViewClientes.Size = new System.Drawing.Size(761, 327);
+            this.dataGridViewClientes.TabIndex = 0;
+            this.dataGridViewClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // tabPage2
             // 
@@ -453,166 +627,6 @@
             this.Estoque.Size = new System.Drawing.Size(1871, 1058);
             this.Estoque.TabIndex = 0;
             // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.dataGridViewClientes);
-            this.tabPage4.Location = new System.Drawing.Point(4, 43);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1813, 906);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "Lista de Clientes";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // dataGridViewClientes
-            // 
-            this.dataGridViewClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewClientes.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewClientes.Name = "dataGridViewClientes";
-            this.dataGridViewClientes.Size = new System.Drawing.Size(761, 606);
-            this.dataGridViewClientes.TabIndex = 0;
-            this.dataGridViewClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.LightGray;
-            this.tabPage3.Controls.Add(this.panel4);
-            this.tabPage3.Location = new System.Drawing.Point(4, 43);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1813, 906);
-            this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "Cadastrar";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel4.Controls.Add(this.textBoxTelefone);
-            this.panel4.Controls.Add(this.label16);
-            this.panel4.Controls.Add(this.label11);
-            this.panel4.Controls.Add(this.label13);
-            this.panel4.Controls.Add(this.label14);
-            this.panel4.Controls.Add(this.textBoxEndereco);
-            this.panel4.Controls.Add(this.buttonCadastrarCliente);
-            this.panel4.Controls.Add(this.textBoxNomeCliente);
-            this.panel4.Controls.Add(this.textBoxCpf);
-            this.panel4.Controls.Add(this.label15);
-            this.panel4.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panel4.Location = new System.Drawing.Point(405, 126);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(648, 583);
-            this.panel4.TabIndex = 9;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(145, 197);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(83, 29);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "Nome";
-            // 
-            // textBoxCpf
-            // 
-            this.textBoxCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCpf.Location = new System.Drawing.Point(259, 262);
-            this.textBoxCpf.Name = "textBoxCpf";
-            this.textBoxCpf.Size = new System.Drawing.Size(197, 35);
-            this.textBoxCpf.TabIndex = 4;
-            // 
-            // textBoxNomeCliente
-            // 
-            this.textBoxNomeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNomeCliente.Location = new System.Drawing.Point(259, 194);
-            this.textBoxNomeCliente.Name = "textBoxNomeCliente";
-            this.textBoxNomeCliente.Size = new System.Drawing.Size(197, 35);
-            this.textBoxNomeCliente.TabIndex = 2;
-            // 
-            // buttonCadastrarCliente
-            // 
-            this.buttonCadastrarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCadastrarCliente.Location = new System.Drawing.Point(259, 473);
-            this.buttonCadastrarCliente.Name = "buttonCadastrarCliente";
-            this.buttonCadastrarCliente.Size = new System.Drawing.Size(150, 64);
-            this.buttonCadastrarCliente.TabIndex = 1;
-            this.buttonCadastrarCliente.Text = "Cadastrar";
-            this.buttonCadastrarCliente.UseVisualStyleBackColor = true;
-            this.buttonCadastrarCliente.Click += new System.EventHandler(this.buttonCadastrarCliente_Click);
-            // 
-            // textBoxEndereco
-            // 
-            this.textBoxEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEndereco.Location = new System.Drawing.Point(259, 329);
-            this.textBoxEndereco.Name = "textBoxEndereco";
-            this.textBoxEndereco.Size = new System.Drawing.Size(197, 35);
-            this.textBoxEndereco.TabIndex = 6;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(220, 70);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(240, 29);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "Cadastro de cliente";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(102, 332);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(126, 29);
-            this.label13.TabIndex = 7;
-            this.label13.Text = "Endereco";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(175, 265);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(53, 29);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "Cpf";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(110, 400);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(118, 29);
-            this.label16.TabIndex = 9;
-            this.label16.Text = "Telefone";
-            // 
-            // textBoxTelefone
-            // 
-            this.textBoxTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTelefone.Location = new System.Drawing.Point(259, 397);
-            this.textBoxTelefone.Name = "textBoxTelefone";
-            this.textBoxTelefone.Size = new System.Drawing.Size(197, 35);
-            this.textBoxTelefone.TabIndex = 8;
-            // 
-            // Fiado
-            // 
-            Fiado.Controls.Add(this.tabPage3);
-            Fiado.Controls.Add(this.tabPage4);
-            Fiado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            Fiado.Location = new System.Drawing.Point(0, 0);
-            Fiado.Name = "Fiado";
-            Fiado.Padding = new System.Drawing.Point(10, 10);
-            Fiado.SelectedIndex = 0;
-            Fiado.Size = new System.Drawing.Size(1821, 953);
-            Fiado.TabIndex = 10;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -621,6 +635,13 @@
             this.Controls.Add(this.Estoque);
             this.Name = "Form1";
             this.Text = "Form1";
+            Fiado.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
@@ -637,12 +658,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.Estoque.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            Fiado.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -696,6 +711,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.DataGridView dataGridViewClientes;
+        private System.Windows.Forms.TextBox textBoxPesquisaCliente;
     }
 }
 

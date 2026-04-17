@@ -174,7 +174,7 @@ namespace ERPmercadinho
             }
         }
 
-        private bool CadastrarCliente(string nomeCliente , string cpf , string telefone , string endereco)
+        private bool CadastrarCliente(string nomeCliente, string cpf, string telefone, string endereco)
         {
             string conexaoString = "server=localhost;user=root;password=root;database=ERPmercadinho;";
             using (MySqlConnection conexao = new MySqlConnection(conexaoString))
@@ -213,7 +213,7 @@ namespace ERPmercadinho
                 catch (Exception ex)
                 {
                     MessageBox.Show("Erro ao cadastrar cliente: " + ex.Message);
-                    return false;   
+                    return false;
                 }
             }
         }
@@ -230,7 +230,7 @@ namespace ERPmercadinho
             CarregarClientes();
         }
 
-        
+
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -254,7 +254,7 @@ namespace ERPmercadinho
             decimal preco = decimal.Parse(textBoxPreco.Text);
 
             bool cadastro = CadastroProduto(codigo, nome, preco);
-            if(cadastro)
+            if (cadastro)
             {
                 textBoxNome.Clear();
                 textBoxCodigo.Clear();
@@ -332,7 +332,7 @@ namespace ERPmercadinho
                 string resultado = PesquisarProdutoPorCodigo(codigo);
                 if (resultado != null)
                 {
-                    FormQuantidadeArmazenarProduto formArmazenar = new FormQuantidadeArmazenarProduto(resultado , codigo , this);
+                    FormQuantidadeArmazenarProduto formArmazenar = new FormQuantidadeArmazenarProduto(resultado, codigo, this);
                     formArmazenar.ShowDialog();
                     textBoxCodigoArmazenar.Clear();
                 }
@@ -341,7 +341,7 @@ namespace ERPmercadinho
                     MessageBox.Show("Produto não encontrado.");
                     return;
                 }
-                
+
 
             }
             else
@@ -363,7 +363,7 @@ namespace ERPmercadinho
                 string.IsNullOrEmpty(endereco))
             {
                 MessageBox.Show("Por favor, preencha todos os campos.", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; 
+                return;
             }
 
             bool cadastroCliente = CadastrarCliente(nomeCliente, cpf, telefone, endereco);
@@ -391,5 +391,52 @@ namespace ERPmercadinho
         {
 
         }
-    }
+
+              
+
+        private void PesquisarCliente(string nomeCliente)
+        {
+            string conexaoString = "server=localhost;user=root;password=root;database=ERPmercadinho;";
+
+            using (MySqlConnection conexao = new MySqlConnection(conexaoString))
+            {
+                try
+                {
+                    conexao.Open();
+
+                    string sql ;
+
+                    if (string.IsNullOrWhiteSpace(nomeCliente))
+                    {
+                        sql = "SELECT * FROM cliente";
+                    }
+                    else
+                    {
+                        sql = "SELECT * FROM cliente WHERE nome LIKE @nomeCliente";
+                    }
+
+                    using (var cmd = new MySqlCommand(sql, conexao))
+                    {
+                        cmd.Parameters.AddWithValue("@nomeCliente", "%" + nomeCliente + "%");
+
+                        MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                        DataTable tabela = new DataTable();
+                        adapter.Fill(tabela);
+
+                        dataGridViewClientes.DataSource = tabela;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao pesquisar cliente: " + ex.Message);
+                }
+            }
+        }
+
+        private void textBoxPesquisaCliente_TextChanged(object sender, EventArgs e)
+        {
+            string nome = textBoxPesquisaCliente.Text.Trim();
+            PesquisarCliente(nome);
+        }
+    } 
 }
