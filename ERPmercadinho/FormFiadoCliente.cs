@@ -49,7 +49,8 @@ namespace ERPmercadinho
                         f.data,
                         p.nome AS produto,
                         fi.quantidade,
-                        (fi.quantidade * fi.preco) AS valor
+                        (fi.quantidade * fi.preco) AS valor,
+                         f.pago
                     FROM fiado f
                     JOIN fiado_itens fi ON f.id = fi.id_fiado
                     JOIN produtos p ON p.id = fi.id_produto
@@ -101,7 +102,8 @@ namespace ERPmercadinho
             SELECT SUM(fi.quantidade * fi.preco)
             FROM fiado f
             JOIN fiado_itens fi ON f.id = fi.id_fiado
-            WHERE f.id_cliente = @idCliente";
+            WHERE f.id_cliente = @idCliente
+            AND f.pago = 0";
 
                 using (var cmd = new MySqlCommand(sql, conexao))
                 {
@@ -117,6 +119,35 @@ namespace ERPmercadinho
             }
         }
 
+        private void buttonPagamentoFiado_Click(object sender, EventArgs e)
+        {
+            PagarFiado(idCliente);
+        }
 
+        private void PagarFiado(int idCliente)
+        {
+            string conexaoString = "server=localhost;user=root;password=root;database=ERPmercadinho;";
+            using (var conexao = new MySqlConnection(conexaoString))
+            {
+                conexao.Open();
+
+                try
+                {
+                    string sql = "UPDATE fiado SET pago = 1 WHERE id_cliente = @idCliente ";
+                    using (var cmd = new MySqlCommand(sql, conexao))
+                    {
+                        cmd.Parameters.AddWithValue("@idCliente", idCliente);
+                        cmd.ExecuteNonQuery();
+                    }
+                    CarregarItensFiadoCliente(idCliente);
+                    AtualizarDivida();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao Pagar Divida do fiado: " + ex.Message);
+                }
+
+            }
+        }
     }
 }

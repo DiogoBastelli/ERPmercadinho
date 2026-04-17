@@ -34,6 +34,7 @@
             this.buttonNovoFiado = new System.Windows.Forms.Button();
             this.labelValorTotalFiado = new System.Windows.Forms.Label();
             this.labelNomeClienteHistoricoFiado = new System.Windows.Forms.Label();
+            this.buttonPagamentoFiado = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFiados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +67,7 @@
             // 
             // buttonNovoFiado
             // 
-            this.buttonNovoFiado.Location = new System.Drawing.Point(932, 359);
+            this.buttonNovoFiado.Location = new System.Drawing.Point(787, 346);
             this.buttonNovoFiado.Name = "buttonNovoFiado";
             this.buttonNovoFiado.Size = new System.Drawing.Size(117, 52);
             this.buttonNovoFiado.TabIndex = 4;
@@ -91,11 +92,22 @@
             this.labelNomeClienteHistoricoFiado.TabIndex = 6;
             this.labelNomeClienteHistoricoFiado.Text = "Cliente";
             // 
+            // buttonPagamentoFiado
+            // 
+            this.buttonPagamentoFiado.Location = new System.Drawing.Point(976, 346);
+            this.buttonPagamentoFiado.Name = "buttonPagamentoFiado";
+            this.buttonPagamentoFiado.Size = new System.Drawing.Size(117, 52);
+            this.buttonPagamentoFiado.TabIndex = 7;
+            this.buttonPagamentoFiado.Text = "Pagar Divida";
+            this.buttonPagamentoFiado.UseVisualStyleBackColor = true;
+            this.buttonPagamentoFiado.Click += new System.EventHandler(this.buttonPagamentoFiado_Click);
+            // 
             // FormFiadoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1261, 800);
+            this.Controls.Add(this.buttonPagamentoFiado);
             this.Controls.Add(this.labelNomeClienteHistoricoFiado);
             this.Controls.Add(this.labelValorTotalFiado);
             this.Controls.Add(this.buttonNovoFiado);
@@ -118,5 +130,6 @@
         private System.Windows.Forms.Button buttonNovoFiado;
         private System.Windows.Forms.Label labelValorTotalFiado;
         private System.Windows.Forms.Label labelNomeClienteHistoricoFiado;
+        private System.Windows.Forms.Button buttonPagamentoFiado;
     }
 }
