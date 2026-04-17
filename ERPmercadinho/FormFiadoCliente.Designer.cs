@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewFiados = new System.Windows.Forms.DataGridView();
             this.buttonNovoFiado = new System.Windows.Forms.Button();
+            this.labelValorTotalFiado = new System.Windows.Forms.Label();
+            this.labelNomeClienteHistoricoFiado = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFiados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,13 +45,6 @@
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Valor Total";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(557, 626);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
             // 
             // label2
             // 
@@ -67,7 +61,7 @@
             this.dataGridViewFiados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewFiados.Location = new System.Drawing.Point(108, 117);
             this.dataGridViewFiados.Name = "dataGridViewFiados";
-            this.dataGridViewFiados.Size = new System.Drawing.Size(784, 281);
+            this.dataGridViewFiados.Size = new System.Drawing.Size(587, 281);
             this.dataGridViewFiados.TabIndex = 3;
             // 
             // buttonNovoFiado
@@ -80,15 +74,33 @@
             this.buttonNovoFiado.UseVisualStyleBackColor = true;
             this.buttonNovoFiado.Click += new System.EventHandler(this.buttonNovoFiado_Click);
             // 
+            // labelValorTotalFiado
+            // 
+            this.labelValorTotalFiado.AutoSize = true;
+            this.labelValorTotalFiado.Location = new System.Drawing.Point(537, 626);
+            this.labelValorTotalFiado.Name = "labelValorTotalFiado";
+            this.labelValorTotalFiado.Size = new System.Drawing.Size(0, 13);
+            this.labelValorTotalFiado.TabIndex = 5;
+            // 
+            // labelNomeClienteHistoricoFiado
+            // 
+            this.labelNomeClienteHistoricoFiado.AutoSize = true;
+            this.labelNomeClienteHistoricoFiado.Location = new System.Drawing.Point(567, 42);
+            this.labelNomeClienteHistoricoFiado.Name = "labelNomeClienteHistoricoFiado";
+            this.labelNomeClienteHistoricoFiado.Size = new System.Drawing.Size(39, 13);
+            this.labelNomeClienteHistoricoFiado.TabIndex = 6;
+            this.labelNomeClienteHistoricoFiado.Text = "Cliente";
+            // 
             // FormFiadoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1261, 800);
+            this.Controls.Add(this.labelNomeClienteHistoricoFiado);
+            this.Controls.Add(this.labelValorTotalFiado);
             this.Controls.Add(this.buttonNovoFiado);
             this.Controls.Add(this.dataGridViewFiados);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "FormFiadoCliente";
             this.Text = "FormFiadoCliente";
@@ -101,9 +113,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridViewFiados;
         private System.Windows.Forms.Button buttonNovoFiado;
+        private System.Windows.Forms.Label labelValorTotalFiado;
+        private System.Windows.Forms.Label labelNomeClienteHistoricoFiado;
     }
 }

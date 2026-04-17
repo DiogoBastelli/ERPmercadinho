@@ -124,6 +124,7 @@ namespace ERPmercadinho
             MessageBox.Show("Fiado salvo com sucesso!");
             this.DialogResult = DialogResult.OK;
             this.Close();
+
         }
 
         private int CriarFiado(int idCliente)

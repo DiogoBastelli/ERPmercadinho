@@ -26,8 +26,14 @@ namespace ERPmercadinho
         private void FormFiadoCliente_Load(object sender, EventArgs e)
         {
             CarregarItensFiadoCliente(idCliente);
-        }
 
+            AtualizarDivida();
+        }
+        private void AtualizarDivida()
+        {
+            decimal divida = CalcularDivida(idCliente);
+            labelValorTotalFiado.Text = divida.ToString("C");
+        }
         private void CarregarItensFiadoCliente(int idCliente)
         {
             string conexaoString = "server=localhost;user=root;password=root;database=ERPmercadinho;";
@@ -74,6 +80,7 @@ namespace ERPmercadinho
             if (tela.ShowDialog() == DialogResult.OK)
             {
                 CarregarItensFiadoCliente(idCliente);
+                AtualizarDivida();
             }
         }
 
@@ -82,6 +89,34 @@ namespace ERPmercadinho
 
         }
 
-               
+        private decimal CalcularDivida(int idCliente)
+        {
+            string conexaoString = "server=localhost;user=root;password=root;database=ERPmercadinho;";
+
+            using (var conexao = new MySqlConnection(conexaoString))
+            {
+                conexao.Open();
+
+                string sql = @"
+            SELECT SUM(fi.quantidade * fi.preco)
+            FROM fiado f
+            JOIN fiado_itens fi ON f.id = fi.id_fiado
+            WHERE f.id_cliente = @idCliente";
+
+                using (var cmd = new MySqlCommand(sql, conexao))
+                {
+                    cmd.Parameters.AddWithValue("@idCliente", idCliente);
+
+                    var resultado = cmd.ExecuteScalar();
+
+                    if (resultado == DBNull.Value)
+                        return 0;
+
+                    return Convert.ToDecimal(resultado);
+                }
+            }
+        }
+
+
     }
 }

@@ -382,9 +382,14 @@ namespace ERPmercadinho
             {
                 int idCliente = Convert.ToInt32(dataGridViewClientes.Rows[e.RowIndex].Cells["id"].Value);
 
+
                 FormFiadoCliente tela = new FormFiadoCliente(idCliente);
                 tela.ShowDialog();
+
+
             }
+
+            
         }
 
         private void label17_Click(object sender, EventArgs e)
