@@ -26,7 +26,7 @@ namespace ERPmercadinho
         private void FormFiadoCliente_Load(object sender, EventArgs e)
         {
             CarregarItensFiadoCliente(idCliente);
-
+            CarregarItensFiadoNaoPagos(idCliente);
             AtualizarDivida();
         }
         private void AtualizarDivida()
@@ -73,6 +73,41 @@ namespace ERPmercadinho
             }
         }
 
+        private void CarregarItensFiadoNaoPagos(int idCliente)
+        {
+            string conexaoString = "server=localhost;user=root;password=root;database=ERPmercadinho;";
+
+            using (MySqlConnection conexao = new MySqlConnection(conexaoString))
+            {
+                try
+                {
+                    conexao.Open();
+                    string sql = @"
+                    SELECT 
+                        f.data,
+                        p.nome AS produto,
+                        fi.quantidade,
+                        (fi.quantidade * fi.preco) AS valor,
+                         f.pago
+                    FROM fiado f
+                    JOIN fiado_itens fi ON f.id = fi.id_fiado
+                    JOIN produtos p ON p.id = fi.id_produto
+                    WHERE f.id_cliente = @idCliente
+                    AND f.pago = 0
+                    ORDER BY f.data DESC";
+                    MySqlCommand cmd = new MySqlCommand(sql, conexao);
+                    cmd.Parameters.AddWithValue("@idCliente", idCliente);
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                    DataTable tabela = new DataTable();
+                    adapter.Fill(tabela);
+                    dataGridViewFiadoPendente.DataSource = tabela;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao carregar itens Fiado em aberto: " + ex.Message);
+                }
+            }
+        }
 
         private void buttonNovoFiado_Click(object sender, EventArgs e)
         {
@@ -82,6 +117,7 @@ namespace ERPmercadinho
             {
                 CarregarItensFiadoCliente(idCliente);
                 AtualizarDivida();
+                CarregarItensFiadoNaoPagos(idCliente);
             }
         }
 
@@ -122,6 +158,7 @@ namespace ERPmercadinho
         private void buttonPagamentoFiado_Click(object sender, EventArgs e)
         {
             PagarFiado(idCliente);
+            CarregarItensFiadoNaoPagos(idCliente);
         }
 
         private void PagarFiado(int idCliente)
