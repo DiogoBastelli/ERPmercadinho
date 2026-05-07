@@ -88,3 +88,4 @@ D:\ERPmercadinho-main\ERPmercadinho\obj\Debug\ERPmercadinho.exe
 D:\ERPmercadinho-main\ERPmercadinho\obj\Debug\ERPmercadinho.pdb
 D:\ERPmercadinho-main\ERPmercadinho\obj\Debug\ERPmercadinho.FormFiadoCliente.resources
 D:\ERPmercadinho-main\ERPmercadinho\obj\Debug\ERPmercadinho.FormNovoFiado.resources
+D:\ERPmercadinho-main\ERPmercadinho\obj\Debug\ERPmercadinho.TelaCaixa.resources

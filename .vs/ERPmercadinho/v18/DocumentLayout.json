@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "D:\\ERPmercadinho-main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C77F651C-B990-47F9-9705-4AF94223AA94}|ERPmercadinho\\ERPmercadinho.csproj|d:\\erpmercadinho-main\\erpmercadinho\\formfiadocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C77F651C-B990-47F9-9705-4AF94223AA94}|ERPmercadinho\\ERPmercadinho.csproj|solutionrelative:erpmercadinho\\formfiadocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C77F651C-B990-47F9-9705-4AF94223AA94}|ERPmercadinho\\ERPmercadinho.csproj|d:\\erpmercadinho-main\\erpmercadinho\\telacaixa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C77F651C-B990-47F9-9705-4AF94223AA94}|ERPmercadinho\\ERPmercadinho.csproj|solutionrelative:erpmercadinho\\telacaixa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C77F651C-B990-47F9-9705-4AF94223AA94}|ERPmercadinho\\ERPmercadinho.csproj|D:\\ERPmercadinho-main\\erpmercadinho\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C77F651C-B990-47F9-9705-4AF94223AA94}|ERPmercadinho\\ERPmercadinho.csproj|solutionrelative:erpmercadinho\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C77F651C-B990-47F9-9705-4AF94223AA94}|ERPmercadinho\\ERPmercadinho.csproj|D:\\ERPmercadinho-main\\erpmercadinho\\formfiadocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C77F651C-B990-47F9-9705-4AF94223AA94}|ERPmercadinho\\ERPmercadinho.csproj|solutionrelative:erpmercadinho\\formfiadocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C77F651C-B990-47F9-9705-4AF94223AA94}|ERPmercadinho\\ERPmercadinho.csproj|d:\\erpmercadinho-main\\erpmercadinho\\telacaixa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C77F651C-B990-47F9-9705-4AF94223AA94}|ERPmercadinho\\ERPmercadinho.csproj|solutionrelative:erpmercadinho\\telacaixa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C77F651C-B990-47F9-9705-4AF94223AA94}|ERPmercadinho\\ERPmercadinho.csproj|d:\\erpmercadinho-main\\erpmercadinho\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C77F651C-B990-47F9-9705-4AF94223AA94}|ERPmercadinho\\ERPmercadinho.csproj|solutionrelative:erpmercadinho\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C77F651C-B990-47F9-9705-4AF94223AA94}|ERPmercadinho\\ERPmercadinho.csproj|d:\\erpmercadinho-main\\erpmercadinho\\formfiadocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C77F651C-B990-47F9-9705-4AF94223AA94}|ERPmercadinho\\ERPmercadinho.csproj|solutionrelative:erpmercadinho\\formfiadocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C77F651C-B990-47F9-9705-4AF94223AA94}|ERPmercadinho\\ERPmercadinho.csproj|D:\\ERPmercadinho-main\\erpmercadinho\\formnovofiado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C77F651C-B990-47F9-9705-4AF94223AA94}|ERPmercadinho\\ERPmercadinho.csproj|D:\\ERPmercadinho-main\\erpmercadinho\\formnovofiado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C77F651C-B990-47F9-9705-4AF94223AA94}|ERPmercadinho\\ERPmercadinho.csproj|solutionrelative:erpmercadinho\\formnovofiado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C77F651C-B990-47F9-9705-4AF94223AA94}|ERPmercadinho\\ERPmercadinho.csproj|D:\\ERPmercadinho-main\\erpmercadinho\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C77F651C-B990-47F9-9705-4AF94223AA94}|ERPmercadinho\\ERPmercadinho.csproj|solutionrelative:erpmercadinho\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C77F651C-B990-47F9-9705-4AF94223AA94}|ERPmercadinho\\ERPmercadinho.csproj|D:\\ERPmercadinho-main\\erpmercadinho\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -38,11 +50,11 @@
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 208,
+      "VerticalTabListWidth": 229,
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,7 +62,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\ERPmercadinho-main\\ERPmercadinho\\Program.cs",
+              "RelativeDocumentMoniker": "ERPmercadinho\\Program.cs",
+              "ToolTip": "D:\\ERPmercadinho-main\\ERPmercadinho\\Program.cs",
+              "RelativeToolTip": "ERPmercadinho\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T23:59:17.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TelaCaixa.cs",
+              "DocumentMoniker": "D:\\ERPmercadinho-main\\ERPmercadinho\\TelaCaixa.cs",
+              "RelativeDocumentMoniker": "ERPmercadinho\\TelaCaixa.cs",
+              "ToolTip": "D:\\ERPmercadinho-main\\ERPmercadinho\\TelaCaixa.cs",
+              "RelativeToolTip": "ERPmercadinho\\TelaCaixa.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T23:42:42.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TelaCaixa.cs [Design]",
+              "DocumentMoniker": "D:\\ERPmercadinho-main\\ERPmercadinho\\TelaCaixa.cs",
+              "RelativeDocumentMoniker": "ERPmercadinho\\TelaCaixa.cs",
+              "ToolTip": "D:\\ERPmercadinho-main\\ERPmercadinho\\TelaCaixa.cs [Design]",
+              "RelativeToolTip": "ERPmercadinho\\TelaCaixa.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T22:51:02.044Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "FormNovoFiado.cs",
               "DocumentMoniker": "D:\\ERPmercadinho-main\\ERPmercadinho\\FormNovoFiado.cs",
               "RelativeDocumentMoniker": "ERPmercadinho\\FormNovoFiado.cs",
@@ -62,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "FormNovoFiado.cs [Design]",
               "DocumentMoniker": "D:\\ERPmercadinho-main\\ERPmercadinho\\FormNovoFiado.cs",
               "RelativeDocumentMoniker": "ERPmercadinho\\FormNovoFiado.cs",
@@ -73,20 +123,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FormFiadoCliente.cs",
               "DocumentMoniker": "D:\\ERPmercadinho-main\\ERPmercadinho\\FormFiadoCliente.cs",
               "RelativeDocumentMoniker": "ERPmercadinho\\FormFiadoCliente.cs",
               "ToolTip": "D:\\ERPmercadinho-main\\ERPmercadinho\\FormFiadoCliente.cs",
               "RelativeToolTip": "ERPmercadinho\\FormFiadoCliente.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAD4v3cAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAkwA0AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-17T18:34:13.186Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "FormFiadoCliente.cs [Design]",
               "DocumentMoniker": "D:\\ERPmercadinho-main\\ERPmercadinho\\FormFiadoCliente.cs",
               "RelativeDocumentMoniker": "ERPmercadinho\\FormFiadoCliente.cs",
@@ -98,41 +148,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Form1.resx",
               "DocumentMoniker": "D:\\ERPmercadinho-main\\ERPmercadinho\\Form1.resx",
               "RelativeDocumentMoniker": "ERPmercadinho\\Form1.resx",
               "ToolTip": "D:\\ERPmercadinho-main\\ERPmercadinho\\Form1.resx",
               "RelativeToolTip": "ERPmercadinho\\Form1.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2026-04-16T20:21:08.997Z"
+              "WhenOpened": "2026-04-16T20:21:08.997Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\ERPmercadinho-main\\ERPmercadinho\\Form1.cs",
               "RelativeDocumentMoniker": "ERPmercadinho\\Form1.cs",
               "ToolTip": "D:\\ERPmercadinho-main\\ERPmercadinho\\Form1.cs",
               "RelativeToolTip": "ERPmercadinho\\Form1.cs",
-              "ViewState": "AgIAAGkBAAAAAAAAAAAqwIEBAABGAAAAAAAAAA==",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAowIQAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T20:19:52.158Z"
+              "WhenOpened": "2026-04-16T20:19:52.158Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\ERPmercadinho-main\\ERPmercadinho\\Form1.cs",
               "RelativeDocumentMoniker": "ERPmercadinho\\Form1.cs",
               "ToolTip": "D:\\ERPmercadinho-main\\ERPmercadinho\\Form1.cs [Design]",
               "RelativeToolTip": "ERPmercadinho\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T20:16:12.216Z"
+              "WhenOpened": "2026-04-16T20:16:12.216Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "D:\\ERPmercadinho-main\\ERPmercadinho\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "ERPmercadinho\\Form1.Designer.cs",
@@ -140,7 +193,8 @@
               "RelativeToolTip": "ERPmercadinho\\Form1.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T20:16:04.864Z"
+              "WhenOpened": "2026-04-16T20:16:04.864Z",
+              "EditorCaption": ""
             }
           ]
         }

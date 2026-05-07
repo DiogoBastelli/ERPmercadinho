@@ -107,7 +107,7 @@ namespace ERPmercadinho
                 }
             }
         }
-        private string PesquisarProdutoPorCodigo(int codigo)
+        public string PesquisarProdutoPorCodigo(int codigo)
         {
             string conexaoString = "server=localhost;user=root;password=root;database=ERPmercadinho;";
 
