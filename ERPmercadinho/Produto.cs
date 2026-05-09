@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ERPmercadinho
 {
-    class Produto
+    public class Produto
     {
+        public int Codigo { get; set; }
+
         public string Nome { get; set; }
-        public Decimal Preco { get; set; }
-        public int Quantidade { get; set; }
-        public int EstoqueMinimo { get; set; }
-        public string Codigo { get; set; }
+
+        public decimal Preco { get; set; }
     }
 }

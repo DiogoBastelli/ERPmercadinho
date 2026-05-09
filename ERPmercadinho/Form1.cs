@@ -107,38 +107,44 @@ namespace ERPmercadinho
                 }
             }
         }
-        public string PesquisarProdutoPorCodigo(int codigo)
+        public Produto PesquisarProdutoPorCodigo(int codigo)
+{
+    string conexaoString = "server=localhost;user=root;password=root;database=ERPmercadinho;";
+
+    using (MySqlConnection conexao = new MySqlConnection(conexaoString))
+    {
+        try
         {
-            string conexaoString = "server=localhost;user=root;password=root;database=ERPmercadinho;";
+            conexao.Open();
 
-            using (MySqlConnection conexao = new MySqlConnection(conexaoString))
+            string sql = "SELECT codigo, nome, preco FROM produtos WHERE codigo = @codigo";
+
+            MySqlCommand cmd = new MySqlCommand(sql, conexao);
+
+            cmd.Parameters.AddWithValue("@codigo", codigo);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
             {
-                try
-                {
-                    conexao.Open();
-                    string sql = "SELECT codigo, nome FROM produtos WHERE codigo = @codigo";
-                    MySqlCommand cmd = new MySqlCommand(sql, conexao);
-                    cmd.Parameters.AddWithValue("@codigo", codigo);
+                Produto produto = new Produto();
 
-                    MySqlDataReader reader = cmd.ExecuteReader();
+                produto.Codigo = Convert.ToInt32(reader["codigo"]);
+                produto.Nome = reader["nome"].ToString();
+                produto.Preco = Convert.ToDecimal(reader["preco"]);
 
-                    if (reader.Read())
-                    {
-                        string linha = $"Código: {reader["codigo"]} - Nome: {reader["nome"]}";
-                        return linha;
-                    }
-                    else
-                    {
-                        return null;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro ao carregar produto: " + ex.Message);
-                    return null;
-                }
+                return produto;
             }
+
+            return null;
         }
+        catch (Exception ex)
+        {
+            MessageBox.Show("Erro ao pesquisar produto: " + ex.Message);
+            return null;
+        }
+    }
+}
 
 
         private void AlterarProdutos(int codigo, string campoSelecionado, string novoValor)
@@ -329,20 +335,20 @@ namespace ERPmercadinho
         {
             if (int.TryParse(textBoxCodigoArmazenar.Text, out int codigo))
             {
-                string resultado = PesquisarProdutoPorCodigo(codigo);
+                Produto resultado = PesquisarProdutoPorCodigo(codigo);
+
                 if (resultado != null)
                 {
-                    FormQuantidadeArmazenarProduto formArmazenar = new FormQuantidadeArmazenarProduto(resultado, codigo, this);
+                    FormQuantidadeArmazenarProduto formArmazenar =
+                        new FormQuantidadeArmazenarProduto(resultado, codigo, this);
+
                     formArmazenar.ShowDialog();
                     textBoxCodigoArmazenar.Clear();
                 }
                 else
                 {
                     MessageBox.Show("Produto não encontrado.");
-                    return;
                 }
-
-
             }
             else
             {

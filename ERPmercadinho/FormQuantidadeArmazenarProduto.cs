@@ -14,12 +14,13 @@ namespace ERPmercadinho
     public partial class FormQuantidadeArmazenarProduto: Form
     {
         private Form1 formPrincipal;
-        private string produtoInfo;
+        private Produto produto;
         private int codigo;
-        public FormQuantidadeArmazenarProduto(string produtoInfo , int codigo, Form1 formPrincipal)
+
+        public FormQuantidadeArmazenarProduto(Produto produto, int codigo, Form1 formPrincipal)
         {
             InitializeComponent();
-            this.produtoInfo = produtoInfo;
+            this.produto = produto;
             this.codigo = codigo;
             this.formPrincipal = formPrincipal;
         }
@@ -65,7 +66,7 @@ namespace ERPmercadinho
 
         private void FormQuantidadeArmazenarProduto_Load(object sender, EventArgs e)
         {
-            labelResultadoPesquisa1.Text = produtoInfo;
+            labelResultadoPesquisa1.Text =  produto.Nome;
         }
 
         private void buttonArmazenar_Click(object sender, EventArgs e)
