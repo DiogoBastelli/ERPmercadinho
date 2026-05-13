@@ -33,7 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelValorTotal = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -94,23 +94,23 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.labelValorTotal);
             this.panel2.Location = new System.Drawing.Point(346, 679);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(441, 51);
             this.panel2.TabIndex = 2;
             // 
-            // label2
+            // labelValorTotal
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(302, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 37);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "R$ 0,00";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.labelValorTotal.AutoSize = true;
+            this.labelValorTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelValorTotal.ForeColor = System.Drawing.Color.Red;
+            this.labelValorTotal.Location = new System.Drawing.Point(302, 6);
+            this.labelValorTotal.Name = "labelValorTotal";
+            this.labelValorTotal.Size = new System.Drawing.Size(136, 37);
+            this.labelValorTotal.TabIndex = 0;
+            this.labelValorTotal.Text = "R$ 0,00";
+            this.labelValorTotal.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel3
             // 
@@ -228,7 +228,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelValorTotal;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel6;
