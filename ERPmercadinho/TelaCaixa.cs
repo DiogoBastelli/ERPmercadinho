@@ -93,6 +93,14 @@ namespace ERPmercadinho
             dataGridViewProdutos.Columns.Add("preco", "Preço");
             dataGridViewProdutos.Columns.Add("subtotal", "Subtotal");
 
+            dataGridViewProdutos.Columns["codigo"].Width = 120;
+            dataGridViewProdutos.Columns["produto"].Width = 170;
+            dataGridViewProdutos.Columns["quantidade"].Width = 160;
+            dataGridViewProdutos.Columns["preco"].Width = 100;
+            dataGridViewProdutos.Columns["subtotal"].Width = 130;
+
+            dataGridViewProdutos.RowTemplate.Height = 35;
+
         }
     }
 }
